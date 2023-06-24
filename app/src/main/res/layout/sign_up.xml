@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/signIn"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginTop="100dp"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="170dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="35dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/signUp_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Sign Up"
+        android:textSize="25dp">
+    </Button>
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="393dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="440dp"
+    android:layout_marginLeft="100dp"
+    android:text="Already have an account?"
+    android:textColor="#000000"
+    android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="470dp"
+        android:text="Login"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/noAcc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I don't want an account"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:textSize="15dp"/>
+
+</RelativeLayout>

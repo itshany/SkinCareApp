@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SkinCareApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="SalicylicAcid">Salicylic Acid</string>
+    <string name="details_salicylicacid">Salicylic acid is a beta hydroxy acid. It’s well-known for reducing acne by exfoliating the skin and keeping pores clear. When your hair follicles (pores) get plugged with dead skin cells and oil, blackheads (open plugged pores), whiteheads (closed plugged pores), or pimples (pustules) often appear. Salicylic acid penetrates your skin and works to dissolve the dead skin cells clogging your pores</string>
+    <string name="GlycolicAcid">Glycolic Acid</string>
+    <string name="detailsGlycolicAcid">Glycolic acid is an alpha hydroxy acid (AHA). It’s found naturally in sugarcane, but it can also be made in a lab. Glycolic acid is a small molecule, so it can easily pass through your skin barrier.
+        When applied topically, glycolic acid exfoliates your skin while retaining moisture. It works by sloughing dead skin cells from the top layer of your skin. This helps promotes the growth of new skin.
+        Additionally, glycolic acid decreases inflammation and protects against ultraviolet B radiation. It also works against bacteria that cause acne breakouts.</string>
 </resources>

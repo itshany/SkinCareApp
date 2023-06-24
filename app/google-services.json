@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "83681757288",
+    "firebase_url": "https://tyota-529b0-default-rtdb.firebaseio.com",
+    "project_id": "tyota-529b0",
+    "storage_bucket": "tyota-529b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83681757288:android:1ebb3263bc7a4ba2ecd3dd",
+        "android_client_info": {
+          "package_name": "com.example.skincareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83681757288-lia5ss2rce5a2b13id6rb5t88af5i2s4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-Dv0waNPov-_nl1inZQFLVJJTImyoH_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83681757288-lia5ss2rce5a2b13id6rb5t88af5i2s4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

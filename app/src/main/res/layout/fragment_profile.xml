@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cebfb6"
+    tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Fragment"
+        android:textSize="30dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/logIn_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textSize="20dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="90dp"/>
+
+    <Button
+        android:id="@+id/logIn_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="25dp"
+        android:backgroundTint="#8d988d"
+        android:layout_marginStart="150dp"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/signIn_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textSize="20dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginStart="100dp"/>
+
+    <Button
+        android:id="@+id/signUp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_marginTop="570dp"
+        android:layout_marginLeft="25dp"
+        android:backgroundTint="#8d988d"
+        android:layout_marginStart="145dp"
+        android:textSize="25dp"/>
+
+</FrameLayout>
