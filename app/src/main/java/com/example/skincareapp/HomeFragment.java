@@ -19,7 +19,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,10 +33,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment{
 
-    TextView saDetails, gaDetails;
+    /*TextView saDetails, gaDetails;
     LinearLayout saLayout, gaLayout;
+    String databaseReadValue = "0", fristBtnName;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myDatabaseRef = database.getReference();*/
+    LinearLayout linearLayout;
+    FetchData fetchData;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,6 +56,8 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
         // Required empty public constructor
     }
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -70,6 +80,22 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //myDatabaseRef.child("mainViewData").child("RecyclerView").child("1").child("Message").setValue("Hello, World!");
+        //myDatabaseRef.setValue("Hello, World!");
+
+        /*myDatabaseRef.child("mainViewData").child("RecyclerView").child("1").child("name").get().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+                //Log.e("firebase", "Error getting data", task.getException());
+            }
+            else {
+                fristBtnName = String.valueOf(task.getResult().getValue());
+                Toast.makeText(getContext(), fristBtnName, Toast.LENGTH_SHORT).show();
+            }
+        });*/
+
+
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -81,7 +107,32 @@ public class HomeFragment extends Fragment {
                                 Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        saDetails = (TextView) view.findViewById(R.id.saDetails);
+        linearLayout = view.findViewById(R.id.linearLayout);
+
+        new FetchData().readData(new FetchData.DataStatus() {
+            @Override
+            public void DataIsLoaded(List<SkinCareInfo> data, List<String> keys) {
+                String name = data.get(0).getName();
+                Toast.makeText(getContext(), name, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void DataIsInserted() {
+
+            }
+
+            @Override
+            public void DataIsUpdated() {
+
+            }
+
+            @Override
+            public void DataIsDeleted() {
+
+            }
+        });
+
+        /*saDetails = (TextView) view.findViewById(R.id.saDetails);
         gaDetails = (TextView) view.findViewById(R.id.gaDetails);
         saLayout = (LinearLayout) view.findViewById(R.id.saLayout);
         gaLayout = (LinearLayout) view.findViewById(R.id.gaLayout);
@@ -91,9 +142,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 int v = (saDetails.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
-
                 TransitionManager.beginDelayedTransition(saLayout,new AutoTransition());
                 saDetails.setVisibility(v);
+
+                basicRead();
             }
         });
         gaLayout.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +156,42 @@ public class HomeFragment extends Fragment {
                 TransitionManager.beginDelayedTransition(gaLayout,new AutoTransition());
                 gaDetails.setVisibility(v);
             }
-        });
+        });*/
         return view;
+    }
+
+    public void basicRead(/*String name, String details, String index*/) {
+        // [START write_message]
+        // Write a message to the database
+        //FirebaseDatabase database = FirebaseDatabase.getInstance();
+        //DatabaseReference myRef = database.getReference("message");
+
+        //myRef.setValue("Hello, World!");
+        // [END write_message]
+
+        // [START read_message]
+        // Read from the database
+        /*myDatabaseRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                 databaseReadValue = dataSnapshot.getValue(String.class);
+                Toast.makeText(getContext(), databaseReadValue, Toast.LENGTH_LONG).show();
+                //Log.d(TAG, "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Failed to read value
+                //Log.w(TAG, "Failed to read value.", error.toException());
+                //String value = null;
+            }
+            
+        });
+        // [END read_message]*/
+
+
+
     }
 }
