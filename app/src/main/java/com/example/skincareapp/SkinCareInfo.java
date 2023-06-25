@@ -3,6 +3,9 @@ package com.example.skincareapp;
 public class SkinCareInfo {
     String name, description, goodFor, treating;
 
+    //state of the item
+    boolean expanded;
+
     public SkinCareInfo() {}
 
     public SkinCareInfo(String name, String description, String goodFor, String treating) {
@@ -24,6 +27,10 @@ public class SkinCareInfo {
         return description;
     }
 
+    public boolean isExpanded(){
+        return expanded;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -42,5 +49,9 @@ public class SkinCareInfo {
 
     public void setTreating(String treating) {
         this.treating = treating;
+    }
+
+    public void setExpanded(boolean expanded){
+        this.expanded = expanded;
     }
 }
